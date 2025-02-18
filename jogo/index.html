@@ -5,10 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo</title>
 </head>
+<style>
+body, html {
+    background: linear-gradient(rgb(14, 13, 26), rgb(34, 34, 34));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+canvas {
+    background: linear-gradient(rgb(102, 171, 199), rgb(170, 170, 170));
+    border: 1px solid rgb(148, 148, 148);
+    box-shadow: 5px 5px 10px rgb(70, 70, 70);
+    border-radius: 3px;
+}
+</style>
 <body>
-    <canvas></canvas>
+    <canvas width="1000px" height="700px" allow="autoplay"></canvas>
 </body>
-<script src="./script/main.js"></script>
+<script src="./script/config/keys.js"></script>
+
 <script src="./script/classes/sprite.js"></script>
 <script src="./script/classes/map.js"></script>
+
+<script src="./script/main.js"></script>
 </html>
