@@ -3,8 +3,18 @@ class Map extends Sprite {
         super({x, y, width, height, color})
     }
 
-    move(dx, dy) {
-        this.pos.x += dx
-        this.pos.y += dy
+     async move(key, type) {
+        switch (type) {
+            case 'keydown':
+                if (keys.up.includes(key)) {
+                    this.pos.y += vel
+                } if (keys.right.includes(key)) {
+                    this.pos.x -= vel
+                } if (keys.left.includes(key)) {
+                    this.pos.x += vel
+                } if (keys.down.includes(key)) {
+                    this.pos.y -= vel
+                }
+        }
     }
 }
